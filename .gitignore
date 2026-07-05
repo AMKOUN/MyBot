@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# Database
+instance/
+*.sqlite3
+
+# Telegram bot
+bot/config.py
+
+# VS Code
+.vscode/

@@ -1,7 +1,13 @@
 from flask import Flask
+from settings import Config
+from .models import db
 
-#  Application
 app = Flask(__name__)
+app.config.from_object(Config)
 
+db.init_app(app)
 
-from . import routes # noqa
+with app.app_context():
+    db.create_all()
+
+from . import routes
